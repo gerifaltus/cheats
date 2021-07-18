@@ -3,7 +3,7 @@
 Comandos para administrar imagenes de docker
 * docker image ls
   * Muestra todas las imágenes guardadas dentro del docker engine.
-* ff
+* docker pull nombre_imagen (sirve para descargar una imagen desde docker hub)
 
 ## Contenedor
 Comandos para administrar contenedores de docker
