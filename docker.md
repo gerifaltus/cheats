@@ -21,3 +21,5 @@ Comandos para administrar contenedores de docker
     * imagen-contenedor: nombre de la imagen desde la cual se creará el contenedor.
 * docker start nombre-contenedor | id-contenedor
   * Este comando sirve para inicializar un contenedor que ya ha sido creado con el comando **docker run** y se encuentra listado en el docker engine
+* docker logs nombre-contenedor | id-contenedor
+  * Muestra el log de arranque del contenedor, para saber si todo se ha ejecutado correctamente al momento de levantar el contenedor o si tiene errores y corregirlos.
