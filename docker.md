@@ -12,3 +12,5 @@ Comandos para administrar contenedores de docker
   * Muestra los contenedores que están levantados y funcionando.
 * docker ps -a
   * Muestra todos los contenedores tanto los que estan corriendo como los que no.
+* docker container ls
+  * Hace lo mismo que **docker ps | docker ps -a**
