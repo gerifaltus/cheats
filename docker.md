@@ -14,5 +14,8 @@ Comandos para administrar contenedores de docker
   * Muestra todos los contenedores tanto los que estan corriendo como los que no.
 * docker container ls
   * Hace lo mismo que **docker ps | docker ps -a**
+* **docker run -p 1234:4321 --name nombre-contenedor imagen-contenedor**
   * Crea y ejecuta un contenedor en base a una imagen de docker:
-    * hola
+    * Etiqueta -p 1234:4321: es para indicar el puerto del host (puerto 1234, equipo donde se encuentra docker instalado) que estará asociado al puerto del contenedor (puerto 4321, el contenedor por sí mismo).
+    * Etiqueta -name nombre-contenedor: nombre del contenedor que aparecerá cuando sea listado con **docker container ls | docler ps**
+    * imagen-contenedor: nombre de la imagen desde la cual se creará el contenedor.
