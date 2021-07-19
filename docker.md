@@ -5,6 +5,8 @@ Comandos para administrar imagenes de docker
   * Muestra todas las imágenes guardadas dentro del docker engine.
 * **docker pull nombre_imagen** 
   * sirve para descargar una imagen desde docker hub
+* docker image rm nombre-imagen | id-imagen
+  * Elimina la imagen seleccionada junto con sus dependencias, si la imagen fue descargada de docker hub, se podrá descargar de nuevo.
 
 ## Contenedor
 Comandos para administrar contenedores de docker
@@ -23,3 +25,7 @@ Comandos para administrar contenedores de docker
   * Este comando sirve para inicializar un contenedor que ya ha sido creado con el comando **docker run** y se encuentra listado en el docker engine
 * docker logs nombre-contenedor | id-contenedor
   * Muestra el log de arranque del contenedor, para saber si todo se ha ejecutado correctamente al momento de levantar el contenedor o si tiene errores y corregirlos.
+* docker stop nombre-contenedor | id-contenedor
+  * Sirve para detener un contenedor, cuando se use nuevamente **docker ps** no aparecerá el contenedor detenido, pero si se usa **docker ps -a** apareceran todos los contenedores incluyendo el que acaba de ser detenido con el timestamp de hace cuanto tiempo fue su ultima ejecución.
+* docker rm nombre-contenedor | id-contenedor
+  * Sirve para eliminar un contenedor, al eliminar ya no aparecerá cuando se ejecute **docker ps -a**
