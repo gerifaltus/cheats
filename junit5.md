@@ -59,7 +59,7 @@ El resultado cuando se ejecuta el test es el siguiente:
 ```
 ejecutando: Test para probar testInfo - test1 con las etiquetas [saldo]
 ```
-
+Aunque la funcionalidad de TestInfo puede usarse en cada método, no es factible repetir la misma línea de código en cada test, lo mejor es agregarlo dentro de un método anotado con @BeforeEach.
 
 
 ## TestReporter
