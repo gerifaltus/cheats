@@ -63,3 +63,19 @@ Aunque la funcionalidad de TestInfo puede usarse en cada método, no es factible
 
 
 ## TestReporter
+Al igual que TestInfo, TestReporter funciona como una salida estandar tipo log, es decir en vez de usar `System.out.println()` para emitir la salida dentro de cada método, se puede usar testReporter.publishEntry(). En el ejmplo se muestra su funcionamiento.
+```java
+@Tag("saldo") //probar saldos
+@DisplayName("Test para probar testInfo")
+void test1(TestInfo testInfo, TestReporter testReporter){
+  testReporter.publishEntry("ejecutando:  "+testInfo.getDisplayNombre + " - "+ testInfo.getTestMethod().orElse(null).getName() + " con las etiquetas: "+testInfo.getTags())
+}
+```
+
+La salida sería algo como lo siguiente:
+```
+timestamp = 2021-02-18T08:32:58, value = ejecutando: Test para probar testInfo - test1 con las etiquetas: [saldo]
+```
+
+
+
