@@ -24,3 +24,23 @@ Referencias:
 @CsvFileSource
 @MethodSource
 ```
+
+## Tag
+Sirve para nombrar o etiquetar pruebas y de esta manera seleccionar, dentro de un archivo, qué tests correr específicamente. En el ejemplo aparecen varios test con diferentes etiquetas. Por default cuando se ejecuta el archivo de test, se ejecutan todos los tests, pero en la configuración de la ejecución de tests (dependiendo del IDE) se puede seleccionar qué tags (tests) se van a probar. 
+```java
+@Tag("saldo") //probar saldos
+void test1(){
+}
+
+@Tag("retiro")
+void test2(){
+}
+
+@Tag("transferencia")
+void test3(){
+}
+
+@Tag("saldo")
+void test4(){
+}
+```
