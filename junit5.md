@@ -16,3 +16,11 @@ El test se muestra más o menos así:
 Numero 1 ejecutando con valor 100 - 100
 Numero 2 ejecutando con valor 200 - 200
 ```
+
+Referencias:
+```
+@ValueSource
+@CsvSource
+@CsvFileSource
+@MethodSource
+```
