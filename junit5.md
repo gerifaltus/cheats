@@ -90,4 +90,8 @@ void test1(){
 
 En el ejemplo anterior se fija el timeout en 5 segundos pero la ejecución del test es de 6 segundos, entonces la prueba fallará.
 
+Referencias:
+```assertTimeout();
+```
+
 
