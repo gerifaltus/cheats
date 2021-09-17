@@ -77,5 +77,17 @@ La salida sería algo como lo siguiente:
 timestamp = 2021-02-18T08:32:58, value = ejecutando: Test para probar testInfo - test1 con las etiquetas: [saldo]
 ```
 
+## Timeout
+Esta anotación sirve para realizar pruebas con tiempo medido, es decir, en un test se puede probar la eficiencia de algún método y ese método no debe sobrepasar x cantidad de segundos, o por ejemplo realizar pruebas repetidas (con argumentos @ParametizedTest) y la bateria de pruebas no debe sobrepasar x cantidad de segundos. En el ejemplo se muestra cómo fuciona.
+```java
+@Tag("timeout")
+@DisplayName("Test para probar timeout")
+@Timeout(5)
+void test1(){
+  Timeout.SECONDSsleep(6);
+}
+```
+
+En el ejemplo anterior se fija el timeout en 5 segundos pero la ejecución del test es de 6 segundos, entonces la prueba fallará.
 
 
