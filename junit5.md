@@ -44,3 +44,22 @@ void test3(){
 void test4(){
 }
 ```
+
+## TestInfo
+Sirve para mostrar imprimir información descriptiva de la clase (el método test, los tags, argumentos, etc) dentro de cada test a probar. En el ejemplo en el siguiente método se puede incluir la información contenida en TestInfo:
+```java
+@Tag("saldo") //probar saldos
+@DisplayName("Test para probar testInfo")
+void test1(TestInfo testInfo){
+  System.out.println("ejecutando:  "+testInfo.getDisplayNombre + " - "+ testInfo.getTestMethod().orElse(null).getName() + " con las etiquetas: "+testInfo.getTags())
+}
+```
+
+El resultado cuando se ejecuta el test es el siguiente:
+```
+ejecutando: Test para probar testInfo - test1 con las etiquetas [saldo]
+```
+
+
+
+## TestReporter
